@@ -19,7 +19,7 @@ export default function AssignmentsList() {
             .catch(() => setError("Error al obtener las tareas"));
     }, []);
     return (
-        <div className="mt-4">
+        <div className="p-6 bg-gray-100 rounded shadow">
             <h2 className="text-2xl font-bold mb-2">Tareas</h2>
             {error && <p className="text-red-500">{error}</p>}
             <ul className="space-y-2">

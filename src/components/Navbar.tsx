@@ -5,8 +5,7 @@ interface NavbarProps {
 }
 export default function Navbar({ onLogout }: NavbarProps) {
     return (
-        <nav className="bg-blue-600 text-white p-4 flex justify-between
-items-center shadow-lg rounded-lg">
+        <nav className="bg-gradient-to-r from-blue-500 to-green-400 text-white p-6 flex justify-between items-center shadow-lg align-middle">
             <div className="flex items-center space-x-4">
                 <span className="text-2xl font-bold">📚📚 Laredu</span>
                 <Link className="hover:text-gray-300"
@@ -20,9 +19,9 @@ items-center shadow-lg rounded-lg">
                 <Link className="hover:text-gray-300"
                     to="/messages">Mensajes</Link>
             </div>
-            
+            <div className="-mt-4">
             <LogoutButton onLogout={onLogout} />
-            
+            </div>
         </nav>
     );
 } 

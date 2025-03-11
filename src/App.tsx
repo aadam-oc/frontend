@@ -37,7 +37,7 @@ export default function App() {
   };
   return (
     <Router>
-      <div className=" bg-gray-200 p-4 rounded-lg">
+      <div className=" bg-gray-300 items-center min-h-screen">
         {!token ? (
           <Routes>
             <Route path="/" element={<Login onLoginSuccess={handleLoginSuccess} />} />

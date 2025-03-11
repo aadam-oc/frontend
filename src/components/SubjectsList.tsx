@@ -20,7 +20,7 @@ export default function SubjectsList() {
             .catch(() => setError("Error al obtener las asignaturas"));
     }, []);
     return (
-        <div className="mt-4">
+        <div className="p-6 bg-gray-100 rounded shadow">
             <h2 className="text-2xl font-bold mb-2">Asignaturas</h2>
             {error && <p className="text-red-500">{error}</p>}
             <ul className="space-y-2">

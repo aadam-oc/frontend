@@ -35,7 +35,7 @@ export default function CoursesList() {
     }
 
     return (
-        <div className="mt-4">
+        <div className="p-6 bg-gray-100 rounded shadow">
             <h2 className="text-2xl font-bold mb-2">Courses</h2>
             <ul className="space-y-2">
                 {courses.map((course) => (

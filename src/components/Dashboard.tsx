@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 export default function Dashboard() {
     return (
-        <div className="p-6">
+        <div className="p-6 bg-gray-100 rounded shadow">
             <h1 className="text-3xl font-bold mb-6">Bienvenido a
                 Laredu</h1>
             <div className="grid grid-cols-2 gap-4">

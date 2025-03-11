@@ -49,7 +49,7 @@ export default function MessageList() {
             .catch(() => setMessage("Error al obtener mensajes"));
     };
     return (
-        <div className="mt-4">
+        <div className="p-6 bg-gray-100 rounded shadow">
             <h2 className="text-2xl font-bold mb-2">Mensajería</h2>
             {message && <p className="text-green-500">{message}</p>}
             <form onSubmit={handleSendMessage} className="mb-4 flex space-x-2">

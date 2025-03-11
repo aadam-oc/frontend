@@ -37,31 +37,33 @@ export default function Login({ onLoginSuccess }: LoginProps) {
             });
     };
     return (
-        <div className="max-w-sm mx-auto bg-white p-4 rounded shadow">
+        <div className="w-screen h-screen bg-white flex items-center justify-center bg-gradient-to-r from-blue-500 to-green-400">
+            <div className="bg-white p-8 rounded-lg shadow-xl w-96">
             <h2 className="text-xl font-bold mb-4">Login</h2>
             {error && <p className="text-red-500 mb-2">{error}</p>}
-            <form onSubmit={handleSubmit} className="flex flex-col space-y-3">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-3">
                 <input
                     type="email"
                     placeholder="Email"
-                    className="border p-2 rounded"
+                    className="border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
                 <input
                     type="password"
                     placeholder="Password"
-                    className="border p-2 rounded"
+                    className="border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
                 <button
                     type="submit"
-                    className="bg-blue-600 text-white p-2 rounded hover:bg-blue-500"
+                    className="bg-blue-600 text-white p-2 rounded hover:bg-blue-500 hover:scale-102 cursor-pointer transition-all"
                 >
                     Login
                 </button>
             </form>
+            </div>
         </div>
     );
 } 
