@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 interface RegisterProps {
     // onRegisterSuccess hara un login y recibirá el token
-    onRegisterSuccess: (token: string) => void;
+    onRegisterSuccess: (token: string, user_id: number) => void;
 }
 export default function Register( { onRegisterSuccess }: RegisterProps) {
     const [name, setName] = useState("");
@@ -22,7 +22,7 @@ export default function Register( { onRegisterSuccess }: RegisterProps) {
                 return res.json();
             })
             .then((data) => {
-                onRegisterSuccess(data.token);
+                onRegisterSuccess(data.token, data.user_id);
                 setMessage("Usuario registrado con éxito");
             }
             )

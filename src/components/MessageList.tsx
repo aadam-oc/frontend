@@ -38,6 +38,15 @@ export default function MessageList() {
             .then((res) => res.json())
             .then(() => setMessage("Mensaje enviado con éxito"))
             .catch(() => setMessage("Error al enviar mensaje"));
+
+            fetch("http://127.0.0.1:8000/api/messages", {
+            headers: {
+                Authorization: "Bearer " + localStorage.getItem("token"),
+            },
+        })
+            .then((res) => res.json())
+            .then((data) => setMessages(data))
+            .catch(() => setMessage("Error al obtener mensajes"));
     };
     return (
         <div className="mt-4">

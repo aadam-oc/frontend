@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 interface LoginProps {
-    onLoginSuccess: (token: string) => void;
-    // onLoginSuccess recibirá el token
+    onLoginSuccess: (token: string, userId: number) => void;
+    // onLoginSuccess recibirá el token y el userId
 }
 export default function Login({ onLoginSuccess }: LoginProps) {
     // Estados locales para email y password
@@ -27,7 +27,9 @@ export default function Login({ onLoginSuccess }: LoginProps) {
             })
             .then((data) => {
                 // data.token y data.user vendrán del backend
-                onLoginSuccess(data.token);
+                onLoginSuccess(data.token, data.user_id);
+                localStorage.setItem("token", data.token);
+                localStorage.setItem("userId", data.user_id);
                 
             })
             .catch((err) => {

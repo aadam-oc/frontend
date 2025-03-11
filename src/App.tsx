@@ -16,9 +16,10 @@ import Dashboard from "./components/Dashboard";
 export default function App() {
   const [token, setToken] = useState<string | null>(null);
   const handleLoginSuccess = (receivedToken: string) => {
-    localStorage.setItem("token", receivedToken);
-    setToken(receivedToken);
-  };
+      
+      setToken(receivedToken);
+    
+    };
   const handleLogout = () => {
     const token = localStorage.getItem("token");
     if (!token) return;

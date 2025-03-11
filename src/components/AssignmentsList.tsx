@@ -25,7 +25,7 @@ export default function AssignmentsList() {
             <ul className="space-y-2">
                 {assignments.map((assignment) => (
                     <li key={assignment.id} className="p-2 border rounded bg-white shadow">
-                        <strong>{assignment.title}</strong> - Fecha de
+                        <strong>{assignment.id}. {assignment.title}</strong> - Fecha de
                         entrega: {assignment.due_date}
                     </li>
                 ))}
